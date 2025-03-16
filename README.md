@@ -21,5 +21,4 @@ This is a Flask-based web application that fetches and displays the latest news 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+   git clone https://github.com/Utkarsh182003/Flask_News_App.git
