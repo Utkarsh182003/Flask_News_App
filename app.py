@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request
 from newsapi import NewsApiClient
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 
 # news api 
-newsapi = NewsApiClient(api_key='5239a19502734795b364f5a8f480ce93')
+newsapi = NewsApiClient(api_key=os.getenv('NEWS_API_KEY'))
 
 def get_sources_and_domains(limit=10):
     all_sources = newsapi.get_sources()['sources']
